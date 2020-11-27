@@ -2,7 +2,6 @@ import pandas as pd
 from pathlib import Path
 
 
-
 # import given txt data
 datpath = Path('data')
 

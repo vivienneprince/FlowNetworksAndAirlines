@@ -6,6 +6,9 @@ Algorithms I Assignment 10 Group Project (Raven).
 ## Data:  
 routes.dat.txt  
 planes.dat.txt  
+  
+routes_info.csv (column names for routes.dat.txt scrapped from assignment info page)  
+planes_cap.csv (scrapped from https://blog.thetravelinsider.info/airplane-types)  
 
 
 ## Goals

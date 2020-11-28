@@ -13,6 +13,7 @@ planes_cap.csv (planes.dat.txt joined with capacity data scrapped from https://b
 
 ## Goals
 Consider trips between destinations that involve no more than 1 layover (i.e. trips involving a beginning and at most one intermediate stop before the destination).  Consider a source city, say New York, and a target city, say San Francisco.  Answer the following questions:   
+ORD to TPA  
 
 1.	Given your inferred load on each flight, what is the maximal number of people that can be moved from New York to San Francisco?  
 2.	Which carrier can transport the greatest number of individuals from New York to San Francisco?  

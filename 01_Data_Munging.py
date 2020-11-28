@@ -5,6 +5,8 @@ from pathlib import Path
 ###                     Initial Data                            ###
 ###################################################################
 
+print ( "merp")
+
 datpath = Path('data')
 
 routes_info = pd.read_csv(datpath / 'routes_info.csv', header=None)  # routes info was c/p from assignment instructions

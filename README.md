@@ -22,9 +22,9 @@ Consider trips between destinations that involve no more than 1 layover (i.e. tr
   
   
 ## A complete solution should include 
-•	a pdf describing how data was transformed, a description of what algorithms were used in the solution, how algorithms were implemented, how the solution was validated, and a discussion concerning how the work might be extended.
-•	Documented code for the problem. 
-•	A 15-minute slide show presentation in which each team member presents part of the solution.
+*	a pdf describing how data was transformed, a description of what algorithms were used in the solution, how algorithms were implemented, how the solution was validated, and a discussion concerning how the work might be extended.  
+*	Documented code for the problem.  
+*	A 15-minute slide show presentation in which each team member presents part of the solution.  
 
 ## Evaluation Rubric:
 There are four main components of the evaluation:

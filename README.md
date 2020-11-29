@@ -8,23 +8,22 @@ routes.dat.txt
 planes.dat.txt  
   
 routes_info.csv (column names for routes.dat.txt scrapped from assignment info page)  
-planes_cap.csv (scrapped from https://blog.thetravelinsider.info/airplane-types)  
+planes_cap.csv (planes.dat.txt joined with capacity data scrapped from https://blog.thetravelinsider.info/airplane-types)  
 
 
 ## Goals
-Consider trips between destinations that involve no more than 1 layover (i.e. trips involving a beginning and at most one intermediate stop before the destination).  Consider a source city, say New York, and a target city, say San Francisco.  Answer the following questions:   
-
-1.	Given your inferred load on each flight, what is the maximal number of people that can be moved from New York to San Francisco?  
-2.	Which carrier can transport the greatest number of individuals from New York to San Francisco?  
+1.	Given inferred load on each flight, find the maximal number of people that can be moved from TPA to ORD? (for all routes with 1 or 0 layovers)  
+2.	Which carrier can transport the greatest number of individuals from TPA to ORD?  
 
 * You will have to make some decisions about how you count people and flights.  Carefully stating what decisions you are making is an important part of answering the questions.
   
   
   
 ## A complete solution should include 
-•	a pdf describing how data was transformed, a description of what algorithms were used in the solution, how algorithms were implemented, how the solution was validated, and a discussion concerning how the work might be extended.
-•	Documented code for the problem. 
-•	A 15-minute slide show presentation in which each team member presents part of the solution.
+*	a pdf describing how data was transformed, a description of what algorithms were used in the solution, how algorithms were implemented, how the solution was validated, and a discussion concerning how the work might be extended.  
+*	Documented code for the problem.  
+*	A 15-minute slide show presentation in which each team member presents part of the solution.  
+
 
 ## Evaluation Rubric:
 There are four main components of the evaluation:

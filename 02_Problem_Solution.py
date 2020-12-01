@@ -62,7 +62,7 @@ def getMaxFlow(s,d,depth = 2):
                 
     # PRINT OUT THE SOLUTION
     
-    cut = nx.flow.minimum_cut_value(R,s,d)
+    cut = nx.flow.minimum_cut_value(R,s,d, flow_func=nx.flow.edmonds_karp)
     
     print(f'For a trip from {s} to {d}\n',
           f'The the value of the minimum cut is {cut} people',
@@ -111,7 +111,7 @@ def getCarrierMax(s,d,depth = 2):
             dest = leg['dest']
             R.add_edge(source,dest, capacity = cap, name = name)
             
-    cut = nx.flow.maximum_flow_value(R,s,d)
+    cut = nx.flow.maximum_flow_value(R,s,d, flow_func=nx.flow.edmonds_karp)
     
     # COMPARE ALL POSSIBLE PATHS AND PICK THE WINNER
     for i in range(len(possible)):

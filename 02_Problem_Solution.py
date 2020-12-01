@@ -102,6 +102,16 @@ def getCarrierMax(s,d,depth = 2):
     mCap = 0
     mPath = []
     mCar = ''
+    R = nx.Graph()
+    for pos in possible:
+        for leg in pos:
+            cap = leg['capacity']
+            name = leg['name']
+            source = leg['source']
+            dest = leg['dest']
+            R.add_edge(source,dest, capacity = cap, name = name)
+            
+    cut = nx.flow.maximum_flow_value(R,s,d)
     
     # COMPARE ALL POSSIBLE PATHS AND PICK THE WINNER
     for i in range(len(possible)):
@@ -113,8 +123,6 @@ def getCarrierMax(s,d,depth = 2):
             mPath = legs
             mCar = carrier
       
-    
-    cut = nx.flow.minimum_cut_value(G,'TPA','ORD')
     
     # PRINT OUT THE SOLUTION
     print(f'For a trip from {s} to {d}\n',

@@ -54,8 +54,18 @@ def getMaxFlow(s,d,depth = 2):
             mPath = legs
             mLay = layovers
             
+    R = nx.Graph()
+    for path in paths:
+        for i in range(len(path)-1):
+            cap = G.get_edge_data(path[i], path[i+1])
+            R.add_edge(path[i],path[i+1], capacity = cap['capacity'], name = cap['name'])
+                
     # PRINT OUT THE SOLUTION
+    
+    cut = nx.flow.minimum_cut_value(R,s,d)
+    
     print(f'For a trip from {s} to {d}\n',
+          f'The the value of the minimum cut is {cut} people',
           f'The maximum capacity is {mCap} with {mLay} layovers\n',
           '#################### ITINERARY ####################')
     for i in range(len(mPath)):
@@ -103,8 +113,12 @@ def getCarrierMax(s,d,depth = 2):
             mPath = legs
             mCar = carrier
       
+    
+    cut = nx.flow.minimum_cut_value(G,'TPA','ORD')
+    
     # PRINT OUT THE SOLUTION
     print(f'For a trip from {s} to {d}\n',
+          f'The the value of the minimum cut is {cut} people',
           f'The maximum single carrier capacity is {mCap} with carrier {mCar}\n',
           '#################### ITINERARY ####################')
     for i in range(len(mPath)):
